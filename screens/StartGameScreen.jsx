@@ -13,8 +13,15 @@ export function StartGameScreen() {
         />
       </View>
 
-      <PrimaryButton>Reset</PrimaryButton>
-      <PrimaryButton>Confirm</PrimaryButton>
+      <View style={styles.buttonContainer}>
+        <View style={styles.button}>
+          <PrimaryButton>Reset</PrimaryButton>
+        </View>
+
+        <View style={styles.button}>
+          <PrimaryButton>Confirm</PrimaryButton>
+        </View>
+      </View>
     </View>
   );
 }
@@ -48,5 +55,15 @@ const styles = StyleSheet.create({
   box: {
     alignItems: "center",
     justifyContent: "center",
+  },
+
+  buttonContainer: {
+    marginTop: 16,
+    flexDirection: "row",
+    justifyContent: "space-around",
+  },
+
+  button: {
+    width: "50%",
   },
 });
