@@ -1,15 +1,16 @@
-import { StyleSheet, Text, View } from "react-native";
+import { Platform, StyleSheet, Text, View } from "react-native";
+import { Title } from "../components/Title";
 
 export function GameScreen() {
   return (
     <View style={styles.screen}>
-      <Text>Game Screen</Text>
+      <Title>Guess a Number</Title>
 
       <View>
         <Text>Higher or Lower</Text>
       </View>
 
-      <View>LOG ROUNDS</View>
+      <View></View>
     </View>
   );
 }
@@ -17,6 +18,6 @@ export function GameScreen() {
 const styles = StyleSheet.create({
   screen: {
     flex: 1,
-    padding: 12,
+    padding: Platform.OS === "android" ? 60 : 10,
   },
 });
